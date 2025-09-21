@@ -50,59 +50,64 @@
       </div>
     </div>
 
-    <!-- Calculator Section -->
-    <div class="flex flex-col lg:flex-row gap-6 mt-6">
+    <!-- Form container -->
+<div class="flex flex-col lg:flex-row gap-6 mt-6">
 
-      <!-- Left column -->
-      <div class="flex-1 flex flex-col gap-5">
-        <!-- Gender -->
-        <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">GENDER</h5>
-          <div class="flex space-x-4">
-            <button id="but1"
-              class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold"
-              onclick="selectGender('male')">Male</button>
-            <button id="but2"
-              class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold"
-              onclick="selectGender('female')">Female</button>
-          </div>
-        </div>
-
-        <!-- Height -->
-        <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">HEIGHT</h5>
-          <input type="number" id="height" placeholder="cm" min="0"
-            class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold">
-        </div>
-
-        <!-- Calculate button -->
-        <button type="button"
-          class="text-white w-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 
-          shadow-lg rounded-lg text-lg px-5 py-2.5">Calculate</button>
-      </div>
-
-      <!-- Right column -->
-      <div class="flex-1 flex flex-col gap-5">
-        <!-- Age -->
-        <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">AGE</h5>
-          <input type="number" min="0" id="first_name" placeholder="Years"
-            class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold" />
-        </div>
-
-        <!-- Weight -->
-        <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
-          <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">WEIGHT</h5>
-          <input type="number" min="0" id="weight" placeholder="in kgs"
-            class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold">
-        </div>
-
-        <!-- Reset button -->
-        <button type="button"
-          class="text-white w-full bg-gradient-to-r from-red-400 via-red-500 to-red-600 
-          shadow-lg rounded-lg text-lg px-5 py-2.5">Reset</button>
+  <!-- Left column -->
+  <div class="flex-1 flex flex-col gap-5">
+    <!-- Gender -->
+    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+      <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">GENDER</h5>
+      <div class="flex space-x-4">
+        <button id="but1"
+          class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold"
+          onclick="selectGender('male')">Male</button>
+        <button id="but2"
+          class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold"
+          onclick="selectGender('female')">Female</button>
       </div>
     </div>
+
+    <!-- Height -->
+    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+      <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">HEIGHT</h5>
+      <input type="number" id="height" placeholder="cm" min="0"
+        class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold">
+    </div>
+  </div>
+
+  <!-- Right column -->
+  <div class="flex-1 flex flex-col gap-5">
+    <!-- Age -->
+    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+      <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">AGE</h5>
+      <input type="number" min="0" id="first_name" placeholder="Years"
+        class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold" />
+    </div>
+
+    <!-- Weight -->
+    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+      <h5 class="mb-2 text-xl font-semibold font-['Josefin_Sans']">WEIGHT</h5>
+      <input type="number" min="0" id="weight" placeholder="in kgs"
+        class="w-full px-6 py-2 border border-gray-300 rounded-md font-semibold">
+    </div>
+  </div>
+</div>
+
+<!-- Buttons at the end -->
+<div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+  <button type="button"
+    class="text-white w-full sm:w-auto bg-gradient-to-r from-green-400 via-green-500 to-green-600 
+    shadow-lg rounded-lg text-lg px-6 py-2.5">
+    Calculate
+  </button>
+  <button type="button"
+    class="text-white w-full sm:w-auto bg-gradient-to-r from-red-400 via-red-500 to-red-600 
+    shadow-lg rounded-lg text-lg px-6 py-2.5">
+    Reset
+  </button>
+</div>
+
 
     <!-- BMI Result -->
     <div class="bg-white flex flex-col justify-center items-center gap-5 p-6 rounded-lg shadow-sm mt-6">
