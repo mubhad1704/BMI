@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/JnWD5KFX/icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Croissant+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Forum&family=Hind:wght@300;400;500;600;700&family=Iceland&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kings&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Nova+Square&family=Princess+Sofia&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Redressed&family=Roboto+Slab:wght@100..900&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- remixicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+        integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+
+    <nav class="bg-white border-gray-200 ">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./images/logo.png" class="h-10" alt="Flowbite Logo" />
+                <h1 class="self-center text-2xl font-semibold whitespace-nowrap " style="font-family: 'Cinzel', serif;">
+                    My<span class="text-amber-800">BMI</span> Calculator</h1>
+            </a>
+            <!-- <div id="login"
+                class="flex items-center space-x-3 rtl:space-x-reverse bg-white border border-amber-500 rounded-full py-2 px-4 cursor-pointer group hover:bg-amber-500 hover:scale-105 hover:border-transparent">
+                <img src="./images/login.png" alt="login" class="h-6">
+                <a href="#" class="text-base font-semibold group-hover:text-amber-950">Login</a>
+            </div> -->
+        </div>
+    </nav>
+   
+    <!-- BMI calculator -->
+
+    <div class="calculator mx-10 p-4 bg-amber-200/50 rounded-xl">
+        <div class="heading flex items-center space-x-2 rtl:space-x-reverse ">
+            <img src="./images/weight.png" class="h-36">
+            <div class="p-3">
+                <h1 class="text-5xl text-amber-900 font-bold" style="font-family: 'Josefin Sans', sans-serif;">BMI
+                    Calculator</h1>
+                <h2 class="text-xl font-semibold " style="font-family: 'Josefin Sans', sans-serif;">Calculate your Body
+                    Mass Index</h2>
+            </div>
+        </div>
+
+        <div class="calculate">
+
+
+            <div class="grid grid-cols-4 gap-5 ">
+                <div class="flex flex-col gap-5">
+                    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm ">
+
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">GENDER</h5>
+                        </a>
+                        <div class="flex space-x-4">
+                            <button id="but1" class="px-6 py-2 border border-gray-300 rounded-md font-semibold"
+                                onclick="selectGender('male')">
+                                Male
+                            </button>
+                            <button id="but2" class="px-6 py-2 border border-gray-300 rounded-md font-semibold"
+                                onclick="selectGender('female')">
+                                Female
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <h5 class="mb-2 text-xl font-semibold tracking-wide"
+                            style="  font-family: 'Josefin Sans', sans-serif;">HEIGHT</h5>
+                        </a>
+                        <div class="flex space-x-4">
+                            <input type="number" placeholder="cm" min="0" id="height"
+                                class="px-6 py-2 border border-gray-300 rounded-md font-semibold">
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 flex m-5 ">
+                        <button type="button"
+                            class="text-white w-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-brshadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2 ">Calculate</button>
+                    </div>
+                </div>
+
+                <!-- second grid -->
+                <div class="flex flex-col gap-5">
+                    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm ">
+
+                        <a href="#">
+                            <h5 class="mb-2 text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">AGE</h5>
+                        </a>
+                        <div class="flex space-x-4">
+                            <input type="number" min="0" id="first_name" placeholder="Years"
+                                class="px-6 py-2 border border-gray-300 rounded-md font-semibold" required />
+
+                        </div>
+
+                    </div>
+
+                    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+                        <h5 class="mb-2 text-xl font-semibold tracking-wide"
+                            style="  font-family: 'Josefin Sans', sans-serif;">WEIGHT</h5>
+                        </a>
+                        <div class="flex space-x-4">
+                            <input type="number" min="0" placeholder="in kgs"
+                                class="px-6 py-2 border border-gray-300 rounded-md font-semibold">
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 flex m-5 ">
+                        <button type="button"
+                            class="text-white w-full bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-brshadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 mb-2 ">Reset</button>
+                    </div>
+                </div>
+
+                <!-- last grid -->
+                <div class="col-span-2 bg-white flex flex-col justify-center items-center gap-5 ">
+                    <h1 class="mb-2 text-xl font-semibold tracking-wide"
+                        style="  font-family: 'Josefin Sans', sans-serif;">Your BMI is</h1>
+                    <h2 id="result" class="text-5xl mb-3"> &#x2010; &#x2010;</h2>
+                    <p id="advice" class="text-lg text-center text-gray-700 italic m-2"></p>
+                    <div class="grid grid-cols-4 gap-3 mx-5">
+                        <div class="underweight bg-yellow-300 flex flex-col items-center justify-center rounded-lg p-2">
+                            <h1 class="text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">Underweight</h1>
+                            <p class="text font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">Less than 18.5
+                            </p>
+                        </div>
+                        <div class="healthy bg-green-300 flex flex-col items-center justify-center rounded-lg p-2">
+                            <h1 class="text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">Healthy</h1>
+                            <p class="text font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">18.5 to 24.9
+                            </p>
+                        </div>
+                        <div class="overweight bg-orange-300 flex flex-col items-center justify-center rounded-lg p-2">
+                            <h1 class="text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">Overweight</h1>
+                            <p class="text font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">25 to 29.9
+                            </p>
+                        </div>
+                        <div class="obese bg-red-300 flex flex-col items-center justify-center rounded-lg p-2">
+                            <h1 class="text-xl font-semibold tracking-wide"
+                                style="  font-family: 'Josefin Sans', sans-serif;">Obese</h1>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
